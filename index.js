@@ -16,7 +16,7 @@ client.on('message', msg => {
         if (msg.content === 'Bye') {
     	msg.reply('Okay, bye!');
   	}
-        if (msg.content === 'Server IP') {
+        if (msg.content === 'Server') {
     	msg.reply('**This is ZythronPE server!** ```IP: play.zythronpe.ml | Port: 19132```');
   	}
         if (msg.content === 'nub') {
