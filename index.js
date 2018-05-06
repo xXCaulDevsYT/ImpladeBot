@@ -1,14 +1,17 @@
-const Discord = require("discord.js");
-const bot = new Discord.Client();
+// Discord.js bot
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-bot.on("ready", () => {
-bot.user.setActivity("Malayman!");
+client.on('ready', () => {
+    client.user.setActivity('https://git.io/d.js-heroku', {type: 'WATCHING'});
 });
 
-bot.on("message", message => {
-    if (message.content === "Hi") {
-    	message.reply("Heyo There!");
-  	}
+client.on('message', msg => {
+    if (!msg.content.startsWith(process.env.PREFIX) || !msg.guild) return;
+    const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
+    const args = msg.content.split(' ').slice(1).join(' ');
+    if (command === 'guide') return msg.channel.send('https://git.io/d.js-heroku');
+    else if (command === 'invite') return msg.channel.send(process.env.INVITE);
 });
 
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
