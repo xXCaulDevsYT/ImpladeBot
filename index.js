@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-client.user.setActivity('https://git.io/ImpladeBot', {type: 'ZythronPE'});
+client.user.setActivity('https://github.com/ImpladeDeveloped/ImpladeBot', {type: 'ZythronPE'});
 });
 
 client.on('message', message => {
