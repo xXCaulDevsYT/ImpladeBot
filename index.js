@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
 client.user.setStatus("dnd");
-client.user.setActivity("Malayman is online!");
+client.user.setActivity('YouTube', { type: 'WATCHING' });
 });
 
 client.on('message', message => {
