@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 bot.on("ready", () => {
 console.log("Ready!");
-bot.user.setActivity("Malayman!", { type: "WATCHING" });
+bot.user.setActivity("Malayman!");
 });
 
 bot.on("message", message => {
