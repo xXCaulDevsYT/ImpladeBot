@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.Client();
 
-client.on('ready', () => {
-client.user.setActivity('YouTube');
-console.log('Ready!');
+bot.on('ready', () => {
+console.log("Ready!");
+bot.user.setActivity("Malayman!");
 });
 
 client.on('message', message => {
