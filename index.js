@@ -7,8 +7,8 @@ client.user.setStatus("dnd");
 });
 
 client.on('message', message => {
-    if (message.content === 'Hi') {
-    	message.reply('Heyo there!');
+    if (message.content === "Hi") {
+    	message.reply("Heyo There!");
   	}
 });
 
