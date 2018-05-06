@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('with code for GhostView plugin!', {type: 'PLAYING'});
+    client.user.setActivity('Fortnite', {type: 'PLAYING'});
 });
 
 client.on('message', msg => {
