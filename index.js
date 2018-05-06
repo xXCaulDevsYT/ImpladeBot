@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('Fortnite', {type: 'PLAYING'});
+    client.user.setActivity('Mobile Legends: Bang Bang', {type: 'PLAYING'});
 });
 
 client.on('message', msg => {
