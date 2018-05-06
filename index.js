@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-client.user.setStatus("dnd");
-client.user.setActivity('YouTube', { type: 'WATCHING' });
+client.user.setActivity('YouTube');
+console.log('Ready!');
 });
 
 client.on('message', message => {
