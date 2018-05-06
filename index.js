@@ -11,9 +11,6 @@ client.on('message', message => {
     const args = message.content.split(' ').slice(1).join(' ');
     if (command === 'guide') return message.channel.send('https://github.com/ImpladeDeveloped/ImpladeBot');
     else if (command === 'invite') return message.channel.send(process.env.INVITE);
-    if (message.content === 'Hi') {
-    	message.reply('Heyo there!');
-  	}
 });
 
 client.login(process.env.TOKEN);
