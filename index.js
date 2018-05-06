@@ -11,10 +11,28 @@ client.on('message', msg => {
     	msg.reply('Heyo, buddy!');
   	}
         if (msg.content === 'Zade') {
-    	msg.reply(':Zade_Is_Malayman: What do you want talking about to him? :You_Wat_Ah:');
+    	msg.reply('What do you want talking about to him?');
   	}
         if (msg.content === 'Bye') {
     	msg.reply('Okay, bye!');
+  	}
+        if (msg.content === 'Server IP') {
+    	msg.reply('**This is ZythronPE server!** ```IP: play.zythronpe.ml | Port: 19132```');
+  	}
+        if (msg.content === 'nub') {
+    	msg.reply('Shut up! You are too noob actually!');
+  	}
+        if (msg.content === 'noob') {
+    	msg.reply('Shut up! You are too noob actually!');
+  	}
+        if (msg.content === 'DM') {
+    	msg.reply('Okay? Go DMs!');
+  	}
+        if (msg.content === 'Noob') {
+    	msg.reply('Shut up! You are too noob actually!');
+  	}
+        if (msg.content === 'Nub') {
+    	msg.reply('Shut up! You are too noob actually!');
   	}
 });
 
