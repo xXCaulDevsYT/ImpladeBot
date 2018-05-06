@@ -6,10 +6,10 @@ console.log("Ready!");
 bot.user.setActivity("Malayman!");
 });
 
-client.on('message', message => {
+bot.on('message', message => {
     if (message.content === "Hi") {
     	message.reply("Heyo There!");
   	}
 });
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
