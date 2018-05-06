@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('on Sleep time! + 8 hours on school with exams!', {type: 'PLAYING'});
+    client.user.setActivity('for school exams!', {type: 'WATCHING'});
 });
 
 client.on('message', msg => {
