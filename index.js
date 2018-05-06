@@ -1,4 +1,4 @@
-// Discord.js bot
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -7,11 +7,15 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if (!msg.content.startsWith(process.env.PREFIX) || !msg.guild) return;
-    const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
-    const args = msg.content.split(' ').slice(1).join(' ');
-    if (command === 'guide') return msg.channel.send('https://git.io/d.js-heroku');
-    else if (command === 'invite') return msg.channel.send(process.env.INVITE);
+    if (msg.content === 'Hi') {
+    	msg.reply('Heyo, buddy!');
+  	}
+        if (msg.content === 'Zade') {
+    	msg.reply(':Zade_Is_Malayman: What do you want talking about to him? :You_Wat_Ah:');
+  	}
+        if (msg.content === 'Bye') {
+    	msg.reply('Okay, bye!');
+  	}
 });
 
 client.login(process.env.BOT_TOKEN);
