@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/ImpladeDeveloped/ImpladeBot#readme",
   "dependencies": {
-    "discord.js": "11.3.0"
+    "discord.js": "11.3.2"
   }
 }
