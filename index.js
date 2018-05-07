@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async msg => {
-    if(message.author.bot) return;
+    if(msg.author.bot) return;
     
     if (msg.content === '$help') {
     	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help ]``` **__Updated By__** Zadezter#0207');
