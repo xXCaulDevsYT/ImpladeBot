@@ -19,7 +19,7 @@ client.on('message', msg => {
         if (msg.content === '$server') {
     	msg.reply('**This is a ZythronPE server! Come and play if you have a time!** ```IP: play.zythronpe.ml | Port: 19132```');
   	}
-        if (msg.content === '$info) {
+        if (msg.content === '$info') {
     	msg.reply('**This bot was created on 6 May 2018 by using a Discord.js/Node.js for this function code!** ```---``` **Version**: IMB-12 ```---``` **Owned by** Zadezter#0207');
   	}
 });
