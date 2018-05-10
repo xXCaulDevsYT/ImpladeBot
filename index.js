@@ -10,7 +10,7 @@ client.on('message', async msg => {
     if(msg.author.bot) return;
     
     if (msg.content === '$help') {
-    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help ]``` **__Updated By__** Zadezter#0207');
+    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``` **__Updated By__** Zadezter#0207');
   	} else
         if (msg.content === 'Zade') {
     	msg.channel.send('You have called him. Please tell, what do you want to talk about it?');
@@ -24,8 +24,8 @@ client.on('message', async msg => {
         if (msg.content === '$info') {
     	msg.channel.send('**This bot was created on 6 May 2018! Using a code with Discord.js!** ```---``` **Version**: IMB-1.0 (BETA) ```---``` **It is owned by** Zadezter#0207');
   	} else
-        if (msg.contsnt === '$github') {
-        msg.channel.send('__GITHUB TEAM__ https://github.com/ImpladeDeveloped');
+        if (msg.content === '$github') {
+        msg.channel.send('__GITHUB TEAM__: https://github.com/ImpladeDeveloped');
     }
 });
 
