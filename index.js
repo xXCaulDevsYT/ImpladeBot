@@ -26,6 +26,7 @@ client.on('message', async msg => {
   	} else
         if (msg.contsnt === '$github') {
         msg.channel.send('__GITHUB TEAM__ https://github.com/ImpladeDeveloped');
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
