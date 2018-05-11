@@ -14,7 +14,7 @@ client.on('message', async msg => {
     } else
         if (msg.content === 'Zade') {
     	msg.channel.send('You called @Zadezter#0207. Please tell, what do you want to talk about?');
-  	} else
+    } else
         if (msg.content === '$ghostview') {
     	msg.channel.send('**Download the latest plugins builds on Poggit at:** __http://poggit.pmmp.io/ci/Zadezter/GhostView__ ```---``` **Check all source code what is made by Zadezter on Github at:** __http://github.com/Zadezter/GhostView__');
     } else
