@@ -11,12 +11,13 @@ client.on('message', async msg => {
     
     if (msg.content === '$help') {
     	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]```[] ```[ $version ]```');
+    } else
         if (msg.content === 'Zade') {
     	msg.channel.send('You called @Zadezter#0207. Please tell, what do you want to talk about?');
   	} else
         if (msg.content === '$ghostview') {
     	msg.channel.send('**Download the latest plugins builds on Poggit at:** __http://poggit.pmmp.io/ci/Zadezter/GhostView__ ```---``` **Check all source code what is made by Zadezter on Github at:** __http://github.com/Zadezter/GhostView__');
-  	} else
+    } else
         if (msg.content === '$server') {
     	msg.channel.send('**This is the ZythronPE server! Come and play if you have a time!** ```IP: play.zythronpe.ml | Port: 19132```');
     } else
