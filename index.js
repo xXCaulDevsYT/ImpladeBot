@@ -10,7 +10,7 @@ client.on('message', async msg => {
     if(msg.author.bot) return;
     
     if (msg.content === '$help') {
-    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``` ```[ $version ]```');
+    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]```[] ```[ $version ]```');
         if (msg.content === 'Zade') {
     	msg.channel.send('You called @Zadezter#0207. Please tell, what do you want to talk about?');
   	} else
@@ -24,7 +24,7 @@ client.on('message', async msg => {
     	msg.channel.send('**This bot was created on 6 May 2018 by using code with Discord.js!** [Owner: __Zadezter#0207__]');
   	} else
         if (msg.content === '$version') {
-        msg.channel.send('**This bot is running a language code** "discord.js" **on version IB-1.3 with using a Heroku Host 24/7!**');
+        msg.channel.send('**This bot is running a language code** __discord.js__ **on version IB-1.3 with using a Heroku Host 24/7!**');
     }
 });
 
