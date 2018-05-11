@@ -10,7 +10,7 @@ client.on('message', async msg => {
     if(msg.author.bot) return;
     
     if (msg.content === '$help') {
-    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``` ```[ $version ]```
+    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``` ```[ $version ]```');
         if (msg.content === 'Zade') {
     	msg.channel.send('You called @Zadezter#0207. Please tell, what do you want to talk about?');
   	} else
