@@ -19,10 +19,10 @@ client.on('message', async msg => {
   	} else
         if (msg.content === '$server') {
     	msg.channel.send('**This is the ZythronPE server! Come and play if you have a time!** ```IP: play.zythronpe.ml | Port: 19132```');
-  	} else
+    } else
         if (msg.content === '$info') {
     	msg.channel.send('**This bot was created on 6 May 2018 by using code with Discord.js!** [Owner: __Zadezter#0207__]');
-  	} else
+    } else
         if (msg.content === '$version') {
         msg.channel.send('**This bot is running a language code** __discord.js__ **on version IB-1.3 with using a Heroku Host 24/7!**');
     }
