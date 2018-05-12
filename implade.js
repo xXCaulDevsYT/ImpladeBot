@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const config = require("./config.json");
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -8,9 +9,15 @@ client.on('ready', () => {
 
 client.on('message', async msg => {
     if(msg.author.bot) return;
+    if(msg.channel.type === "dm") return;
+
+  let prefix = botconfig.prefix;
+  let msgArray = msg.content.split("");
+  let cmd = msgArray[0];
+  let args = msgArray.slice(1);
     
     if (msg.content === '$help') {
-    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``````[ $version ]```');
+    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``````[ $version | $botinfo | $serverinfo ]```');
     } else
         if (msg.content === 'Zade') {
     	msg.channel.send('You called him. Please tell, what do you want to talk about?');
@@ -26,7 +33,33 @@ client.on('message', async msg => {
     } else
         if (msg.content === '$version') {
         msg.channel.send('**This bot is running a language code** __discord.js__ **on version IB-1.3 with using a Heroku Server Hosting 24/7!**');
-    }
+    } else
+      if(cmd === `${prefix}serverinfo`){
+          
+    let sicon = msg.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .setDescription("Server Information")
+    .setColor("#15f153")
+    .setThumbnail(sicon)
+    .addField("Server Name", msg.guild.name)
+    .addField("Created On", msg.guild.createdAt)
+    .addField("You Joined", msg.member.joinedAt)
+    .addField("Total Members", msg.guild.memberCount);
+    return msg.channel.send(serverembed);
+  } else
+      
+  if(cmd === `${prefix}botinfo`){
+
+    let bicon = bot.user.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+    .setDescription("Bot Information")
+    .setColor("#15f153")
+    .setThumbnail(bicon)
+    .addField("Bot Name", bot.user.username)
+    .addField("Created On", bot.user.createdAt);
+    return msg.channel.send(botembed);
+  }
+
 });
 
 client.login(process.env.BOT_TOKEN);
