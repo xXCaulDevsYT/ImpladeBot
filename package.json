@@ -2,14 +2,14 @@
   "name": "ImpladeBot",
   "version": "1.0.0",
   "description": "A starter Discord bot",
-  "main": "index.js",
+  "main": "implade.js",
   "engines": {
     "node": "10.0.0",
     "npm": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node implade.js"
   },
   "repository": {
     "type": "git",
