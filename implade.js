@@ -29,6 +29,9 @@ client.on('message', async msg => {
     } else
         if (msg.content === '$dcinvite') {
         msg.channel.send('**ImpladeDeveloped is a starter team for making a code of their bot and public/private plugins!** Tap this link and join: https://discord.gg/2pRGG52');
+    } else
+        if (msg.content === '$github') {
+        msg.channel.send('**This is our ImpladeDeveloped team on Github!** Tap this link: http://github.com/ImpladeDeveloped');
   }
 
 });
