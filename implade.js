@@ -1,21 +1,16 @@
 const Discord = require('discord.js');
-const config = require("./config.json");
 const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('for games!', {type: 'STREAMING'});
+    client.user.setActivity('for final exam on school!', {type: 'WATCHING'});
 });
 
 client.on('message', async msg => {
     if(msg.author.bot) return;
-    if(msg.content.indexOf(config.prefix) !== 0) return;
-  
-  const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
-  const cmd = args.shift().toLowerCase();
     
     if (msg.content === '$help') {
-    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``````[ $version | $botinfo | $serverinfo ]```');
+    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``````[ $version | $dcinvite ]```');
     } else
         if (msg.content === 'Zade') {
     	msg.channel.send('You called him. Please tell, what do you want to talk about?');
@@ -31,15 +26,9 @@ client.on('message', async msg => {
     } else
         if (msg.content === '$version') {
         msg.channel.send('**This bot is running a language code** __discord.js__ **on version IB-1.3 with using a Heroku Server Hosting 24/7!**');
-    }
-        if(cmd === "botinfo") {
-
-    let botembed = new Discord.RichEmbed()
-    .setDescription("Bot Information")
-    .setColor("#15f153")
-    .addField("Bot Name", bot.user.username)
-    .addField("Created On", bot.user.createdAt);
-    return msg.channel.send(botembed);
+    } else
+        if (msg.content === '$dcinvite') {
+        msg.channel.send('**ImpladeDeveloped is a starter team for making a code of their bot and public/private plugins!** Tap this link and join: https://discord.gg/2pRGG52');
   }
 
 });
