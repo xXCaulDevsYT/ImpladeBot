@@ -10,8 +10,7 @@ client.on('message', async msg => {
     if(msg.author.bot) return;
     
     if (msg.content === '$help') {
-    	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``````[ $version | $dcinvite ]```');
-              let infoembed = new Discord.RichEmbed()
+      let infoembed = new Discord.RichEmbed()
       .setTitle('ImpladeBot Commands List')
       .setDescription('There is available commands for this bot on list!')
       .addField('$help - Bot commands list!')
@@ -23,7 +22,8 @@ client.on('message', async msg => {
       .setColor('#FFFF08')
 
       return message.channel.send(infoembed);
-    } else
+    };
+    
         if (msg.content === 'Zade') {
     	msg.channel.send('You called him. Please tell, what do you want to talk about?');
     } else
@@ -42,7 +42,8 @@ client.on('message', async msg => {
        .setColor('#FFFF08')
 
       return message.channel.send(infoembed);
-    } else
+    };
+    
         if (msg.content === '$ver') {
         let infoembed = new Discord.RichEmbed()
        .setTitle('Bot Server Status')
@@ -52,7 +53,8 @@ client.on('message', async msg => {
        .setColor('#FFFF08')
 
       return message.channel.send(infoembed);
-    } else
+    };
+    
         if (msg.content === '$dcinvite') {
         msg.channel.send('**ImpladeDeveloped is a starter team for making a code of their bot and public/private plugins!** Tap this link and join: https://discord.gg/2pRGG52');
     } else
