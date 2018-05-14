@@ -11,6 +11,18 @@ client.on('message', async msg => {
     
     if (msg.content === '$help') {
     	msg.channel.send('**__Commands List__** ```[ $server | $info | $ghostview | $help | $github ]``````[ $version | $dcinvite ]```');
+              let infoembed = new Discord.RichEmbed()
+      .setTitle('ImpladeBot Commands List')
+      .setDescription('There is available commands for this bot on list!')
+      .addField('$help - Bot commands list!')
+      .addField('$ghostview - GhostView Plugin Info')
+      .addField('$dcinvite - Join our developer team on Discord server!')
+      .addField('$info - Bot Information')
+      .addField('$github - ImpladeDeveloped Github Team!')
+      .addField('$ver - Bot Server Status')
+      .setColor('#FFFF08')
+
+      return message.channel.send(infoembed);
     } else
         if (msg.content === 'Zade') {
     	msg.channel.send('You called him. Please tell, what do you want to talk about?');
@@ -22,10 +34,24 @@ client.on('message', async msg => {
     	msg.channel.send('**This is the ZythronPE server! Come and play if you have a time!** ```IP: play.zythronpe.ml | Port: 19132```');
     } else
         if (msg.content === '$info') {
-    	msg.channel.send('**This bot was created on 6 May 2018 by using code with Discord.js!** [Owner: __Zadezter#0207__]');
+        let infoembed = new Discord.RichEmbed()
+       .setTitle('ImpladeBot Information')
+       .setDescription('This bot was created on 6 May 2018 as a normal bot', 'only for his friends discord server!')
+       .addField('× Bot Creator ×', 'Zadezter#0207)
+       .addField('× YouTube ×', 'In coding..')
+       .setColor('#FFFF08')
+
+      return message.channel.send(infoembed);
     } else
-        if (msg.content === '$version') {
-        msg.channel.send('**This bot is running a language code** __discord.js__ **on version IB-1.3 with using a Heroku Server Hosting 24/7!**');
+        if (msg.content === '$ver') {
+        let infoembed = new Discord.RichEmbed()
+       .setTitle('Bot Server Status')
+       .setDescription('ImpladeBot is running online with using a language code', 'on Discord.js')
+       .addField('Version', 'IB-1.2')
+       .addField('And its hosted by Heroku Hosting Services!')
+       .setColor('#FFFF08')
+
+      return message.channel.send(infoembed);
     } else
         if (msg.content === '$dcinvite') {
         msg.channel.send('**ImpladeDeveloped is a starter team for making a code of their bot and public/private plugins!** Tap this link and join: https://discord.gg/2pRGG52');
