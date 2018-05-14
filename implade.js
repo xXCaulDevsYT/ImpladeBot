@@ -37,7 +37,7 @@ client.on('message', async msg => {
         let infoembed = new Discord.RichEmbed()
        .setTitle('ImpladeBot Information')
        .setDescription('This bot was created on 6 May 2018 as a normal bot', 'only for his friends discord server!')
-       .addField('× Bot Creator ×', 'Zadezter#0207)
+       .addField('× Bot Creator ×', 'Zadezter#0207')
        .addField('× YouTube ×', 'In coding..')
        .setColor('#FFFF08')
 
