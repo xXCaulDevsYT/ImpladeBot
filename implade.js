@@ -10,7 +10,7 @@ client.on('message', async msg => {
     if(msg.author.bot) return;
     
     if (msg.content === '$help') {
-      let infoembed = new Discord.RichEmbed()
+      let helpembed = new Discord.RichEmbed()
       .setTitle('ImpladeBot Commands List')
       .setDescription('There is available commands for this bot on list!')
       .addField('$help - Bot commands list!')
@@ -21,7 +21,7 @@ client.on('message', async msg => {
       .addField('$ver - Bot Server Status')
       .setColor('#FFFF08')
 
-      return message.channel.send(infoembed);
+      return msg.channel.send(helpembed);
     };
     
         if (msg.content === 'Zade') {
@@ -41,18 +41,18 @@ client.on('message', async msg => {
        .addField('× YouTube ×', 'In coding..')
        .setColor('#FFFF08')
 
-      return message.channel.send(infoembed);
+      return msg.channel.send(infoembed);
     };
     
         if (msg.content === '$ver') {
-        let infoembed = new Discord.RichEmbed()
+        let verembed = new Discord.RichEmbed()
        .setTitle('Bot Server Status')
        .setDescription('ImpladeBot is running online with using a language code', 'on Discord.js')
        .addField('Version', 'IB-1.2')
        .addField('And its hosted by Heroku Hosting Services!')
        .setColor('#FFFF08')
 
-      return message.channel.send(infoembed);
+      return msg.channel.send(verembed);
     };
     
         if (msg.content === '$dcinvite') {
