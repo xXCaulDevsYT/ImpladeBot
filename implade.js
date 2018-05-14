@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('for final exam on school!', {type: 'WATCHING'});
+    client.user.setActivity('for Battlegrounds!', {type: 'STREAMING'});
 });
 
 client.on('message', async msg => {
@@ -13,12 +13,12 @@ client.on('message', async msg => {
       let helpembed = new Discord.RichEmbed()
       .setTitle('ImpladeBot Commands List')
       .setDescription('There is available commands for this bot on list!')
-      .addField('$help - Bot commands list!')
-      .addField('$ghostview - GhostView Plugin Info')
-      .addField('$dcinvite - Join our developer team on Discord server!')
-      .addField('$info - Bot Information')
-      .addField('$github - ImpladeDeveloped Github Team!')
-      .addField('$ver - Bot Server Status')
+      .addField('$help - Bot commands list!', '--')
+      .addField('$ghostview - GhostView Plugin Info', '--')
+      .addField('$dcinvite - Join our developer team on Discord server!', '--')
+      .addField('$info - Bot Information', '--')
+      .addField('$github - ImpladeDeveloped Github Team!', '--')
+      .addField('$ver - Bot Server Status', '--')
       .setColor('#FFFF08')
 
       return msg.channel.send(helpembed);
