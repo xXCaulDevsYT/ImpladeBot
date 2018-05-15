@@ -13,12 +13,12 @@ client.on('message', async msg => {
       let helpembed = new Discord.RichEmbed()
       .setTitle('ImpladeBot Commands List')
       .setDescription('There is available commands for this bot on list!')
-      .addField('$help - Bot commands list!', '--')
-      .addField('$ghostview - GhostView Plugin Info', '--')
-      .addField('$dcinvite - Join our developer team on Discord server!', '--')
-      .addField('$info - Bot Information', '--')
-      .addField('$github - ImpladeDeveloped Github Team!', '--')
-      .addField('$ver - Bot Server Status', '--')
+      .addField('$help', 'Bot commands list!')
+      .addField('$ghostview', 'GhostView Plugin Info')
+      .addField('$dcinvite', 'Join our developer team on Discord server!')
+      .addField('$info', 'Bot Information')
+      .addField('$github', 'ImpladeDeveloped Github Team!')
+      .addField('$ver', 'Bot Server Status')
       .setColor('#FFFF08')
 
       return msg.channel.send(helpembed);
@@ -36,7 +36,7 @@ client.on('message', async msg => {
         if (msg.content === '$info') {
         let infoembed = new Discord.RichEmbed()
        .setTitle('ImpladeBot Information')
-       .setDescription('This bot was created on 6 May 2018 as a normal bot', 'only for his friends discord server!')
+       .setDescription('This bot was created on 6 May 2018 as a normal bot, only for his friends discord server!')
        .addField('× Bot Creator ×', 'Zadezter#0207')
        .addField('× YouTube ×', 'In coding..')
        .setColor('#FFFF08')
@@ -47,9 +47,9 @@ client.on('message', async msg => {
         if (msg.content === '$ver') {
         let verembed = new Discord.RichEmbed()
        .setTitle('Bot Server Status')
-       .setDescription('ImpladeBot is running online with using a language code', 'on Discord.js')
+       .setDescription('ImpladeBot is running online with using a language code on Discord.js')
        .addField('Version', 'IB-1.2')
-       .addField('And its hosted by Heroku Hosting Services!')
+       .addField('Bot Hosted By!', 'Heroku Hosting Services!')
        .setColor('#FFFF08')
 
       return msg.channel.send(verembed);
