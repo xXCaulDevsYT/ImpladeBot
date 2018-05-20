@@ -19,7 +19,7 @@ client.on('message', async msg => {
       .addField('+info', 'Bot Information')
       .addField('+github', 'CaulfergiYTs Github Team!')
       .addField('+ver', 'Bot Server Status')
-      .setColor('#FFFF08')
+      .setColor('#ff00b1')
 
       return msg.channel.send(helpembed);
     };
@@ -39,7 +39,7 @@ client.on('message', async msg => {
        .setDescription('This bot was created on 17 May 2018 as a normal bot!')
        .addField('× Bot Creator ×', 'ZarkysMC-YT#7314')
        .addField('× YouTube ×', 'https://youtube.com/emeraldassasinplayz')
-       .setColor('#FFFF08')
+       .setColor('#ff00b1')
 
       return msg.channel.send(infoembed);
     };
@@ -50,7 +50,7 @@ client.on('message', async msg => {
        .setDescription('StrikeBot is running online with using a language code on Discord.js')
        .addField('Version', 'IB-0.01')
        .addField('Bot Hosted By!', 'PlasmaHosting LLC')
-       .setColor('#FFFF08')
+       .setColor('#ff00b1')
 
       return msg.channel.send(verembed);
     };
