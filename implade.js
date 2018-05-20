@@ -27,7 +27,7 @@ client.on('message', async msg => {
         if (msg.content === 'Zarky') {
     	msg.channel.send('You called him. Please tell, what do you want to talk about?');
     } else
-        if (msg.content === '+ip') {
+        if (msg.content === '+ips') {
     	msg.channel.send('**Strikefac.ramshard.net** `19132`');
     } else
         if (msg.content === '+server') {
@@ -53,6 +53,17 @@ client.on('message', async msg => {
        .setColor('#ff00b1')
 
       return msg.channel.send(verembed);
+    };
+
+        if (msg.content === '+ip') {
+        let verembed = new Discord.RichEmbed()
+       .setTitle('StrikeNPE IP List')
+       .setDescription('A List Of StrikeNPEs Current IPs')
+       .addField('Minigames', 'StrikeNPEMG.tk 19132')
+       .addField('OP Factions', 'StrikeNPE.tk 19132')
+       .setColor('#ff00b1')
+
+      return msg.channel.send(ipembed);
     };
     
         if (msg.content === '+dcinvite') {
