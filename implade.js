@@ -3,63 +3,63 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('for Battlegrounds!', {type: 'STREAMING'});
+    client.user.setActivity('+help | 1,121 Users', {type: 'STREAMING'});
 });
 
 client.on('message', async msg => {
     if(msg.author.bot) return;
     
-    if (msg.content === '$help') {
+    if (msg.content === '+help') {
       let helpembed = new Discord.RichEmbed()
-      .setTitle('ImpladeBot Commands List')
+      .setTitle('StrikeBot Commands List')
       .setDescription('There is available commands for this bot on list!')
-      .addField('$help', 'Bot commands list!')
-      .addField('$ghostview', 'GhostView Plugin Info')
-      .addField('$dcinvite', 'Join our developer team on Discord server!')
-      .addField('$info', 'Bot Information')
-      .addField('$github', 'ImpladeDeveloped Github Team!')
-      .addField('$ver', 'Bot Server Status')
+      .addField('+help', 'Bot commands list!')
+      .addField('+ip', 'Our Servers IP')
+      .addField('+dcinvite', 'Join our developer team on Discord server!')
+      .addField('+info', 'Bot Information')
+      .addField('+github', 'CaulfergiYTs Github Team!')
+      .addField('+ver', 'Bot Server Status')
       .setColor('#FFFF08')
 
       return msg.channel.send(helpembed);
     };
     
-        if (msg.content === 'Zade') {
+        if (msg.content === 'Zarky') {
     	msg.channel.send('You called him. Please tell, what do you want to talk about?');
     } else
-        if (msg.content === '$ghostview') {
-    	msg.channel.send('**Download the latest plugins builds on Poggit at:** __http://poggit.pmmp.io/ci/Zadezter/GhostView__``` Poggit ¡ | Github ! ```**Check all source code what is made by Zadezter on Github at:** __http://github.com/Zadezter/GhostView__');
+        if (msg.content === '+ip') {
+    	msg.channel.send('**Strikefac.ramshard.net** `19132`');
     } else
-        if (msg.content === '$server') {
-    	msg.channel.send('**This is the ZythronPE server! Come and play if you have a time!** ```IP: play.zythronpe.ml | Port: 19132```');
+        if (msg.content === '+server') {
+    	msg.channel.send('+ip');
     } else
-        if (msg.content === '$info') {
+        if (msg.content === '+info') {
         let infoembed = new Discord.RichEmbed()
-       .setTitle('ImpladeBot Information')
-       .setDescription('This bot was created on 6 May 2018 as a normal bot, only for his friends discord server!')
-       .addField('× Bot Creator ×', 'Zadezter#0207')
-       .addField('× YouTube ×', 'In coding..')
+       .setTitle('StrikeBot Information')
+       .setDescription('This bot was created on 17 May 2018 as a normal bot!')
+       .addField('× Bot Creator ×', 'ZarkysMC-YT#7314')
+       .addField('× YouTube ×', 'https://youtube.com/emeraldassasinplayz')
        .setColor('#FFFF08')
 
       return msg.channel.send(infoembed);
     };
     
-        if (msg.content === '$ver') {
+        if (msg.content === '+ver') {
         let verembed = new Discord.RichEmbed()
        .setTitle('Bot Server Status')
-       .setDescription('ImpladeBot is running online with using a language code on Discord.js')
-       .addField('Version', 'IB-1.2')
-       .addField('Bot Hosted By!', 'Heroku Hosting Services!')
+       .setDescription('StrikeBot is running online with using a language code on Discord.js')
+       .addField('Version', 'IB-0.01')
+       .addField('Bot Hosted By!', 'PlasmaHosting LLC')
        .setColor('#FFFF08')
 
       return msg.channel.send(verembed);
     };
     
-        if (msg.content === '$dcinvite') {
-        msg.channel.send('**ImpladeDeveloped is a starter team for making a code of their bot and public/private plugins!** Tap this link and join: https://discord.gg/2pRGG52');
+        if (msg.content === '+dcinvite') {
+        msg.channel.send('Command Error -(require:Admin+Higher)!');
     } else
-        if (msg.content === '$github') {
-        msg.channel.send('**This is our ImpladeDeveloped team on Github!** Tap this link: http://github.com/ImpladeDeveloped');
+        if (msg.content === '+github') {
+        msg.channel.send('**This is CaulsDeveloped team on Github!** Tap this link: http://github.com/xXCaulDevsYT');
   }
 
 });
