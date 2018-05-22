@@ -11,14 +11,14 @@ client.on('message', async msg => {
     
     if (msg.content === '+help') {
       let helpembed = new Discord.RichEmbed()
-      .setTitle('StrikeBot Commands List')
-      .setDescription('There is available commands for this bot on list!')
-      .addField('+help', 'Bot commands list!')
-      .addField('+ip', 'Our Servers IP')
-      .addField('+dcinvite', 'Join our developer team on Discord server!')
-      .addField('+info', 'Bot Information')
-      .addField('+github', 'CaulfergiYTs Github Team!')
-      .addField('+ver', 'Bot Server Status')
+      .setTitle('× Help Menu ×')
+      .setDescription('Here Is a list of Commands & there Functions')
+      .addField('+help', 'Shows Commands For The Bot')
+      .addField('+ip', 'This feature is currently in Development')
+      .addField('+dcinvite', 'The Invite link is under Development')
+      .addField('+info', 'Shows some information about the bot')
+      .addField('+github', 'A Link to the Bot Creators GitHub')
+      .addField('+status', 'Shows The Bots Status')
       .setColor('#ff00b1')
 
       return msg.channel.send(helpembed);
@@ -35,21 +35,21 @@ client.on('message', async msg => {
     } else
         if (msg.content === '+info') {
         let infoembed = new Discord.RichEmbed()
-       .setTitle('StrikeBot Information')
-       .setDescription('This bot was created on 17 May 2018 as a normal bot!')
-       .addField('× Bot Creator ×', 'ZarkysMC-YT#7314')
-       .addField('× YouTube ×', 'https://youtube.com/emeraldassasinplayz')
+       .setTitle('Information on the Bot')
+       .setDescription('Shows a list of information on the bot')
+       .addField('Bot Maker', 'ZarkysMC-YT#7314')
+       .addField('Created on', 'may 17th 2018')
        .setColor('#ff00b1')
 
       return msg.channel.send(infoembed);
     };
     
-        if (msg.content === '+ver') {
+        if (msg.content === '+status') {
         let verembed = new Discord.RichEmbed()
-       .setTitle('Bot Server Status')
-       .setDescription('StrikeBot is running online with using a language code on Discord.js')
-       .addField('Version', 'IB-0.01')
-       .addField('Bot Hosted By!', 'PlasmaHosting LLC')
+       .setTitle('Status for the bot')
+       .setDescription('Bot Running using Discord.js')
+       .addField('Version', 'BT-0.1.0 Stable')
+       .addField('Ping', '325.03')
        .setColor('#ff00b1')
 
       return msg.channel.send(verembed);
@@ -70,7 +70,7 @@ client.on('message', async msg => {
         msg.channel.send('Command Error -(require:Admin+Higher)!');
     } else
         if (msg.content === '+github') {
-        msg.channel.send('**This is CaulsDeveloped team on Github!** Tap this link: http://github.com/xXCaulDevsYT');
+        msg.channel.send('```css Follow Us On Github``` **https://github.com/strikedevelopment**');
   }
 
 });
