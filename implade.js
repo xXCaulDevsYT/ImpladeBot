@@ -44,6 +44,12 @@ client.on('message', async msg => {
       return msg.channel.send(infoembed);
     };
     
+        if(command === "kick") {
+        let member = message.mentions.members.first();
+        let reason = args.slice(1).join(" ");
+        member.kick(reason);
+    }
+    
         if (msg.content === '+status') {
         let verembed = new Discord.RichEmbed()
        .setTitle('Status for the bot')
