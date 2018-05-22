@@ -23,7 +23,7 @@ client.on('message', async msg => {
 
       return msg.channel.send(helpembed);
     };
-    
+
         if (msg.content === 'Zarky') {
     	msg.channel.send('You called him. Please tell, what do you want to talk about?');
     } else
@@ -55,22 +55,22 @@ client.on('message', async msg => {
       return msg.channel.send(verembed);
     };
 
-        if (msg.content === '+ip') {
-        let ipmbed = new Discord.RichEmbed()
+        if (msg.content === '+ipss') {
+        let treembed = new Discord.RichEmbed()
        .setTitle('StrikeNPE IP List')
        .setDescription('A List Of StrikeNPEs Current IPs')
        .addField('Minigames', 'StrikeNPEMG.tk 19132')
        .addField('OP Factions', 'StrikeNPE.tk 19132')
        .setColor('#ff00b1')
 
-      return msg.channel.send(ipembed);
+      return msg.channel.send(treembed);
     };
     
-        if (msg.content === '+dcinvite') {
-        msg.channel.send('Command Error -(require:Admin+Higher)!');
+        if (msg.content === '+avatar') {
+        msg.channel.send('message.author.avatarURL');
     } else
         if (msg.content === '+github') {
-        msg.channel.send('```css Follow Us On Github``` **https://github.com/strikedevelopment**');
+        msg.channel.send('```Follow Us On Github``` **https://github.com/strikedevelopment**');
   }
 
 });
