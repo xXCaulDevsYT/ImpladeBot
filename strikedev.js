@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('+help | 1,121 Users', {type: 'STREAMING'});
+    client.user.setActivity('+help | 121 Guilds', {type: 'WATCHING'});
 });
 
 client.on('message', async msg => {
@@ -56,7 +56,7 @@ client.on('message', async msg => {
     };
 
         if (msg.content === '+ip') {
-        let verembed = new Discord.RichEmbed()
+        let ipmbed = new Discord.RichEmbed()
        .setTitle('StrikeNPE IP List')
        .setDescription('A List Of StrikeNPEs Current IPs')
        .addField('Minigames', 'StrikeNPEMG.tk 19132')
