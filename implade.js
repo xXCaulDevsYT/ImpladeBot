@@ -3,81 +3,117 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('+help | 121 Guilds', {type: 'WATCHING'});
+    client.user.setActivity('using Implactor vIR-1.2.3.1', {type: 'PLAYING'});
 });
 
-client.on('message', async msg => {
-    if(msg.author.bot) return;
-    
-    if (msg.content === '+help') {
+client.on('message', async message => {
+    if (message.author.bot) return;
+
+    if (message.content === '+help') {
       let helpembed = new Discord.RichEmbed()
-      .setTitle('× Help Menu ×')
-      .setDescription('Here Is a list of Commands & there Functions')
-      .addField('+help', 'Shows Commands For The Bot')
-      .addField('+ip', 'This feature is currently in Development')
-      .addField('+dcinvite', 'The Invite link is under Development')
-      .addField('+info', 'Shows some information about the bot')
-      .addField('+github', 'A Link to the Bot Creators GitHub')
-      .addField('+status', 'Shows The Bots Status')
-      .setColor('#ff00b1')
-
-      return msg.channel.send(helpembed);
+      .setTitle('- StrikeBot | Commands -')
+      .setDescription('Some of commands only work through admin permisions')
+      .addField('+help', 'StrikeBot command list!')
+      .addField('+media', 'Check our media')
+      .addField('$dcinvite', 'Join our developer team on Discord server!')
+      .addField('+otherbots', 'List of our bots made by ZarkysMC#7314')
+      .addField('$picture', 'Take your picture from your Discord profile!')
+      .addField('+ban', 'Bans a user from the server')
+      .addField('+info', 'See information about this cra-z bot')
+      .addField('$imc', 'ImpladeMC Discord Server. Minecraft BE or Win10 players can join!')
+      .addField('$friends', 'Zadezter put all of his friend list in command!')
+      .setColor('RANDOM')
+      .setFooter(`Requested by ${message.author.tag}`)
+      return message.channel.send(helpembed);
     };
 
-        if (msg.content === 'Zarky') {
-    	msg.channel.send('You called him. Please tell, what do you want to talk about?');
-    } else
-        if (msg.content === '+ips') {
-    	msg.channel.send('**Strikefac.ramshard.net** `19132`');
-    } else
-        if (msg.content === '+server') {
-    	msg.channel.send('+ip');
-    } else
-        if (msg.content === '+info') {
-        let infoembed = new Discord.RichEmbed()
-       .setTitle('Information on the Bot')
-       .setDescription('Shows a list of information on the bot')
-       .addField('Bot Maker', 'ZarkysMC-YT#7314')
-       .addField('Created on', 'may 17th 2018')
-       .setColor('#ff00b1')
+    if (message.content === '+ban') {
+      let implactorembed = new Discord.RichEmbed()
+      .setTitle('Ban')
+      .setDescription('Requires > Admin Permisions')
+      .setColor('#FFFF00')
+      .addField('Cooldown', '3 Seconds')
+      .addField('Usage', '+ban (@user) (time) (reason)')
+      .setFooter(`Command Requires Premium`)
+      return message.channel.send(implactorembed);
+    };
 
-      return msg.channel.send(infoembed);
+    if (message.content === '+media') {
+      let findembed = new Discord.RichEmbed()
+      .setTitle('Check our latest updates in these websites!')
+      .addField('YouTube', 'https://www.youtube.com/emeraldassasinplayz')
+      .addField('Donate', 'https://paypal.me/caulden')
+      .addField('Website', 'http://github.com/StrikeDevelopment')
+      .setColor('#FFFF00')
+      return message.channel.send(findembed);
+    };
+
+    if (message.content === '+info') {
+      let botinfoembed = new Discord.RichEmbed()
+      .setTitle('StrikeBot - Info')
+      .setDescription('All of these version and status is on our info')
+      .addField('Version', 'PoopyAss 1.0')
+      .addField('This Bot Is Running On', 'https://glitch.com')
+      .addField('Bot was created on', '29 May 2018')
+      .setFooter(`Bot made by ZarkysMC#7314`)
+      return message.channel.send(botinfoembed);
+    };
+
+    if (message.content === '+otherbots') {
+      let serverenemyembed = new Discord.RichEmbed()
+      .setTitle('[ OtherBots ]')
+      .setDescription('Other bots by ZarkysMC#7314 To Choose pages do +otherbots (page#)')
+      .addField('GalacticBot', 'A Multi Purpose Intergallactic Space Moderation , Casino , Utility Bot')
+      .addField('LevelCord', 'A Ultimate Discord message Leveling Bot With features such as Achievements , Moderation Commands , NSFW , A Mighty Report System , Profiling , MiniGames , Ultility , Casino , Fun Bot!')
+      .addField('iPHP', 'A Multi purpose PHP Code / Script teaching bot for those who wanna learn to code PHP!')
+      .setColor('RANDOM')
+      .setFooter(`Message Requested by ${message.author.tag} | Page 1/2`)
+      return message.channel.send(serverenemyembed);
+    };
+
+    if (message.content === '+otherbots 2') {
+      let githubembed = new Discord.RichEmbed()
+      .setTitle('[ OtherBots ]')
+      .addField('BTK Clan', 'An Advanced Custom bot that creates custom emojis')
+      .setDescription('All these bots are our open bots others are down or unfinished')
+      .setColor('RANDOM')
+      return message.channel.send(githubembed);
+    };
+
+    if (message.content === '+invite') {
+      let dcinviteembed = new Discord.RichEmbed()
+      .setTitle('CyborgBots - Discord Server Team')
+      .addField('Click here to join!', '----- N/A -----')
+      .setDescription('Sorry but this command is under a few mighty updates')
+      return message.channel.send(dcinviteembed);
     };
     
-        if(msg.content === "+kick") {
-        let member = message.mentions.members.first();
-        let reason = args.slice(1).join(" ");
-        member.kick(reason);
-    }else
-        if (msg.content === '+status') {
-        let verembed = new Discord.RichEmbed()
-       .setTitle('Status for the bot')
-       .setDescription('Bot Running using Discord.js')
-       .addField('Version', 'BT-0.1.0 Stable')
-       .addField('Ping', '325.03')
-       .setColor('#ff00b1')
-
-      return msg.channel.send(verembed);
-    };
-
-        if (msg.content === '+ipss') {
-        let treembed = new Discord.RichEmbed()
-       .setTitle('StrikeNPE IP List')
-       .setDescription('A List Of StrikeNPEs Current IPs')
-       .addField('Minigames', 'StrikeNPEMG.tk 19132')
-       .addField('OP Factions', 'StrikeNPE.tk 19132')
-       .setColor('#ff00b1')
-
-      return msg.channel.send(treembed);
-    };
+   if (message.content === '+profile') {
+     let pictureembed = new Discord.RichEmbed()
+     .setTitle('Heres Your Profile Picture!')
+     .setColor('RANDOM')
+     .setImage(message.author.avatarURL + "?size=2048") 
+     .setFooter(`Requested by ${message.author.tag} | Random Command!`)
+     return message.channel.send(pictureembed)
+   };
+   
+   if (message.content === '!imperial') {
+      let imcembed = new Discord.RichEmbed()
+      .setTitle('ImperialMC - MC:BE Server')
+      .addField('Below is our IP & Port', 'Play.Imperior-MC.Net | 19132')
+      .setDescription('Join our hub / lobby to jump into our portals into adventurous Gamemodes like , HCF , or FactionsOP , or even KitPvP , Our most raved Gamemode is our PrisonsOP Server , New Available Mine Is Mine PvP Very Attractive To Players!')
+      .setFooter(`Players Online At Hub ( 121 )`)
+      return message.channel.send(imcembed);
+    };   
     
-        if (msg.content === '+avatar') {
-        msg.channel.send('message.author.avatarURL');
-    } else
-        if (msg.content === '+github') {
-        msg.channel.send('```Follow Us On Github``` **https://github.com/strikedevelopment**');
-  }
-
+    if (message.content === '!credits') {
+      let imcembed = new Discord.RichEmbed()
+      .setTitle('[ Credits ]')
+      .setDescription('This Section is Credits To All The Helpers')
+      .addField('Zadezter', 'For the Bots Main Code')
+      .addField('GalacticBot', 'For The Embed Message Coloring')
+      return message.channel.send(imcembed);
+    };   
 });
 
 client.login(process.env.BOT_TOKEN);
