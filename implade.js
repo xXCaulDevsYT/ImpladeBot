@@ -15,13 +15,13 @@ client.on('message', async message => {
       .setDescription('Some of commands only work through admin permisions')
       .addField('+help', 'StrikeBot command list!')
       .addField('+media', 'Check our media')
-      .addField('$dcinvite', 'Join our developer team on Discord server!')
+      .addField('+invite', 'Our Devs Invite Link')
       .addField('+otherbots', 'List of our bots made by ZarkysMC#7314')
-      .addField('$picture', 'Take your picture from your Discord profile!')
+      .addField('+profile', 'Your profile')
       .addField('+ban', 'Bans a user from the server')
       .addField('+info', 'See information about this cra-z bot')
-      .addField('$imc', 'ImpladeMC Discord Server. Minecraft BE or Win10 players can join!')
-      .addField('$friends', 'Zadezter put all of his friend list in command!')
+      .addField('+imperial', 'N/A')
+      .addField('+credits', 'Credits to all the bot helpers')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag}`)
       return message.channel.send(helpembed);
@@ -97,7 +97,7 @@ client.on('message', async message => {
      return message.channel.send(pictureembed)
    };
    
-   if (message.content === '!imperial') {
+   if (message.content === '+imperial') {
       let imcembed = new Discord.RichEmbed()
       .setTitle('ImperialMC - MC:BE Server')
       .addField('Below is our IP & Port', 'Play.Imperior-MC.Net | 19132')
@@ -106,7 +106,7 @@ client.on('message', async message => {
       return message.channel.send(imcembed);
     };   
     
-    if (message.content === '!credits') {
+    if (message.content === '+credits') {
       let imcembed = new Discord.RichEmbed()
       .setTitle('[ Credits ]')
       .setDescription('This Section is Credits To All The Helpers')
