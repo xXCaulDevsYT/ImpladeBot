@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('using Implactor vIR-1.2.3.1', {type: 'PLAYING'});
+    client.user.setActivity('D.A.A.T | +help | 23 Guilds', {type: 'WATCHING'});
 });
 
 client.on('message', async message => {
