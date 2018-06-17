@@ -11,16 +11,16 @@ client.on('message', async message => {
 
     if (message.content === '+help') {
       let helpembed = new Discord.RichEmbed()
-      .setTitle('- StrikeBot | Commands -')
+      .setTitle('- Leverage Bot | Commands -')
       .setDescription('Some of commands only work through admin permisions')
       .addField('+help', 'StrikeBot command list!')
       .addField('+media', 'Check our media')
       .addField('+invite', 'Our Devs Invite Link')
-      .addField('+otherbots', 'List of our bots made by ZarkysMC#7314')
+      .addField('+otherbots', 'List of our bots made by EmeraldAssasinYT#0001')
       .addField('+profile', 'Your profile')
       .addField('+ban', 'Bans a user from the server')
       .addField('+info', 'See information about this cra-z bot')
-      .addField('+imperial', 'N/A')
+      .addField('+divinium', 'information about the server')
       .addField('+credits', 'Credits to all the bot helpers')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag}`)
@@ -55,7 +55,7 @@ client.on('message', async message => {
       .addField('Version', 'PoopyAss 1.0')
       .addField('This Bot Is Running On', 'https://glitch.com')
       .addField('Bot was created on', '29 May 2018')
-      .setFooter(`Bot made by ZarkysMC#7314`)
+      .setFooter(`Bot made by EmeraldAssasinYT`)
       return message.channel.send(botinfoembed);
     };
 
@@ -82,7 +82,7 @@ client.on('message', async message => {
 
     if (message.content === '+invite') {
       let dcinviteembed = new Discord.RichEmbed()
-      .setTitle('CyborgBots - Discord Server Team')
+      .setTitle('PlexiDevelopement | Our Dev Team')
       .addField('Click here to join!', '----- N/A -----')
       .setDescription('Sorry but this command is under a few mighty updates')
       return message.channel.send(dcinviteembed);
@@ -97,12 +97,14 @@ client.on('message', async message => {
      return message.channel.send(pictureembed)
    };
    
-   if (message.content === '+imperial') {
+   if (message.content === '+divinium') {
       let imcembed = new Discord.RichEmbed()
       .setTitle('ImperialMC - MC:BE Server')
-      .addField('Below is our IP & Port', 'Play.Imperior-MC.Net | 19132')
-      .setDescription('Join our hub / lobby to jump into our portals into adventurous Gamemodes like , HCF , or FactionsOP , or even KitPvP , Our most raved Gamemode is our PrisonsOP Server , New Available Mine Is Mine PvP Very Attractive To Players!')
-      .setFooter(`Players Online At Hub ( 121 )`)
+      .addField('Below is our IP & Port', '?????????? | ?????')
+      .setDescription('Opening To The Public Soon!')
+      .setField('Main-Owner', 'Dillon')
+      .setField('Owner', 'EmeraldAssasinYT)
+      .setFooter(`Players Online At Hub ( 0 )`)
       return message.channel.send(imcembed);
     };   
     
@@ -110,7 +112,7 @@ client.on('message', async message => {
       let imcembed = new Discord.RichEmbed()
       .setTitle('[ Credits ]')
       .setDescription('This Section is Credits To All The Helpers')
-      .addField('Zadezter', 'For the Bots Main Code')
+      .addField('EmeraldAssasins PlexiDev', 'For the Bots Main Code')
       .addField('GalacticBot', 'For The Embed Message Coloring')
       return message.channel.send(imcembed);
     };   
