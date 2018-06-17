@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('D.A.A.T | +help | 23 Guilds', {type: 'WATCHING'});
+    client.user.setActivity('Youtube', {type: 'WATCHING'});
 });
 
 client.on('message', async message => {
@@ -102,8 +102,6 @@ client.on('message', async message => {
       .setTitle('ImperialMC - MC:BE Server')
       .addField('Below is our IP & Port', '?????????? | ?????')
       .setDescription('Opening To The Public Soon!')
-      .setField('Main-Owner', 'Dillon')
-      .setField('Owner', 'EmeraldAssasinYT)
       .setFooter(`Players Online At Hub ( 0 )`)
       return message.channel.send(imcembed);
     };   
